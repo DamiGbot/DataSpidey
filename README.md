@@ -28,17 +28,17 @@ To run DataSpidey, simply execute the main script with your preferred seed URL:
 
 ```python
 seed_url = 'https://example.com'
-crawl_and_scrape(seed_url)
+crawl_scrape(seed_url)
 ```
 
 ## Customization
 
-To extract different types of data or target specific websites, modify the extract_data() function with the appropriate BeautifulSoup selectors and logic.
+To extract different types of data or target specific websites, modify the get_data() function with the appropriate BeautifulSoup selectors and logic.
 
 For example, to extract article titles and URLs from a blog:
 
 ```python
-def extract_data(html):
+def get_data(html):
     soup = BeautifulSoup(html, 'lxml')
     data = []
     for article in soup.find_all('article'):
